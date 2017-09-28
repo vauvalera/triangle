@@ -3,14 +3,14 @@
 $aMenuLinks = [
 	[
 		"История создания",
-		"history.php",
+		"about.php",
 		[],
 		[],
 		""
 	],
 	[
 		"Отзывы",
-		"1.php",
+		"reviews.php",
 		[],
 		[],
 		""
