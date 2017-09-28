@@ -2,9 +2,12 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"О компании", 
-		"./",
-		Array(),
+		"О компании",
+		"/",
+		Array(
+			"dsds",
+			"/",
+		),
 		Array(),
 		""
 );
