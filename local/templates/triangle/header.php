@@ -80,7 +80,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 				"MENU_CACHE_USE_GROUPS" => "Y",
 				"MENU_CACHE_GET_VARS" => array(
 				),
-				"MAX_LEVEL" => "1",
+				"MAX_LEVEL" => "2",
 				"CHILD_MENU_TYPE" => "left",
 				"USE_EXT" => "N",
 				"DELAY" => "N",
@@ -88,14 +88,17 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 				),
 				false
 			);?>
-            <div class="search">
-                <form role="form">
-                    <i class="fa fa-search"></i>
-                    <div class="field-toggle">
-                        <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                    </div>
-                </form>
-			</div>
+			<?$APPLICATION->IncludeComponent(
+				"bitrix:search.form",
+				"flat",
+				array(
+					"NAME" => "q",
+					"VALUE" => "",
+					"INPUT_SIZE" => 15,
+					"DROPDOWN_SIZE" => 10,
+				),
+				$component, array("HIDE_ICONS" => "Y")
+	);?>
         </div>
     </div>
 </header>

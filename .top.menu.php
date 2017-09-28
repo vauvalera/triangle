@@ -10,17 +10,14 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"О компании",
-		"#",
-		Array(
-			"istroty",
-			"ds/",
-		),
+		"company/",
+		Array("#"),
 		Array(),
 		""
 	),
 	Array(
 		"Услуги",
-		"#",
+		"services/",
 		Array(),
 		Array(),
 		""

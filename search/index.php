@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Поиск");
 ?>
 
-<?$APPLICATION->IncludeComponent("bitrix:search.page", "clear", array(
+<?$APPLICATION->IncludeComponent("bitrix:search.page", "def", array(
 	"RESTART" => "N",
 	"CHECK_DATES" => "N",
 	"USE_TITLE_RANK" => "N",

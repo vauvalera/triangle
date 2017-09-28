@@ -39,7 +39,7 @@
 				<input type="password" name="USER_PASSWORD" maxlength="50" size="17" /></td>
 			</tr>
 		<?
-		if ($arResult["STORE_PASSWORD"] == "Y") 
+		if ($arResult["STORE_PASSWORD"] == "Y")
 		{
 		?>
 			<tr>
@@ -66,7 +66,7 @@
 		<?
 		}
 		?>
-	</table>	
+	</table>
 </form>
 </div>
 
