@@ -1,3 +1,4 @@
+</div>
 <footer id="footer">
 			<div class="container">
 					<div class="row">
@@ -32,23 +33,20 @@
 											<h2>Contacts</h2>
 											<address>
 												<?$APPLICATION->IncludeFile(
-										SITE_DIR."/include/adress1.php",
-										array(),
-										array(
-											"MODE" => "text"
-										)
-									);?>
+												SITE_DIR."/include/adress1.php",
+												array(),
+												array("MODE" => "html"
+														)
+														);?>
 											</address>
-
 											<h2>Address</h2>
 											<address>
 												<?$APPLICATION->IncludeFile(
-										SITE_DIR."/include/adress2.php",
-										array(),
-										array(
-											"MODE" => "html"
-										)
-									);?>
+												SITE_DIR."/include/adress2.php",
+												array(),
+												array("MODE" => "text"
+														)
+														);?>
 											</address>
 									</div>
 							</div>

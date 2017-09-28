@@ -2,39 +2,39 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Компания", 
-		"company/", 
-		Array(), 
-		Array(), 
-		"" 
+		"Главная страница",
+		"/",
+		Array(),
+		Array(),
+		""
 	),
 	Array(
-		"Новости", 
-		"news/", 
-		Array(), 
-		Array(), 
-		"" 
+		"О компании",
+		"#",
+		Array(),
+		Array(),
+		""
 	),
 	Array(
-		"Продукция", 
-		"products/", 
-		Array(), 
-		Array(), 
-		"" 
+		"Услуги",
+		"#",
+		Array(),
+		Array(),
+		""
 	),
 	Array(
-		"Услуги", 
-		"services/", 
-		Array(), 
-		Array(), 
-		"" 
+		"Блог",
+		"#",
+		Array(),
+		Array(),
+		""
 	),
 	Array(
-		"Контакты", 
-		"contacts/", 
-		Array(), 
-		Array(), 
-		"" 
+		"Контакты",
+		"contacts/",
+		Array(),
+		Array(),
+		""
 	)
 );
 ?>
