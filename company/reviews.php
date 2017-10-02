@@ -7,7 +7,7 @@
 		"COMPONENT_TEMPLATE" => "reviews",
 		"IBLOCK_TYPE" => "reviews",
 		"IBLOCK_ID" => "5",
-		"NEWS_COUNT" => "20",
+		"NEWS_COUNT" => "4",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_ORDER1" => "DESC",
 		"SORT_BY2" => "SORT",
