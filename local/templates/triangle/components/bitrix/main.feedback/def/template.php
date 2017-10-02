@@ -26,16 +26,13 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
 <form id="main-contact-form" name="contact-form" method="post" action="<?=POST_FORM_ACTION_URI?>">
 	<?=bitrix_sessid_post()?>
 		<div class="form-group">
-			<input id="input-6" type="text" class="form-control" name="NAME" value="<?=$arResult["AUTHOR_NAME"]?>" placeholder="Name"
-						<?if(empty($arParams["REQUIRED_FIELDS"]) || in_array("NAME", $arParams["REQUIRED_FIELDS"])):?> required<?endif?>>
+			<input id="input-6" type="text" class="form-control" name="NAME" value="" placeholder="Name" required>
 		</div>
 		<div class="form-group">
-			<input id="input-9" type="email" class="form-control" name="EMAIL" value="<?//=$arResult["AUTHOR_EMAIL"]?>" placeholder="Email Id"
-						<?if(empty($arParams["REQUIRED_FIELDS"]) || in_array("EMAIL", $arParams["REQUIRED_FIELDS"])):?> required<?endif?>>
+			<input id="input-9" type="email" class="form-control" name="EMAIL" value="" placeholder="Email Id" required>
 		</div>
 		<div class="form-group">
-				<textarea class="form-control" rows="5" name="MESSAGE" id="input-10" placeholder="Your text here"
-						<?if(empty($arParams["REQUIRED_FIELDS"]) || in_array("MESSAGE", $arParams["REQUIRED_FIELDS"])):?> required<?endif?>><?=$arResult["MESSAGE"]?></textarea>
+				<textarea class="form-control" rows="5" name="MESSAGE" id="input-10" placeholder="Your text here"></textarea>
 		</div>
 		<div class="form-group">
 				<input type="submit" name="submit" class="btn btn-submit" value="Submit">

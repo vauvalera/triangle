@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+// pre($arResult);
 ?>
 
 <?if($arResult["ITEMS"]):?>
@@ -56,7 +57,7 @@ $this->setFrameMode(true);
 							<div class="portfolio-view">
 								   <ul class="nav nav-pills">
 									   <li><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><i class="fa fa-link"></i></a></li>
-									   <li><a href="<?=$arItem["PREVIEW_PICTURE"]["src"]?>" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+									   <li><a href="<?=$arItem["DETAIL_PICTURE"]["SRC"]?>" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
 								   </ul>
 							</div>
 						</div>

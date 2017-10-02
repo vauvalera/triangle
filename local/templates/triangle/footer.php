@@ -105,10 +105,12 @@
 												array(
 													"COMPONENT_TEMPLATE" => ".default",
 													"OK_TEXT" => "Спасибо, ваше сообщение принято.",
-													"EMAIL_TO" => "vauvalera@yandex.ru",
+													"EMAIL_TO" => "vauvalera@google.com",
 													"REQUIRED_FIELDS" => array(
-														0 => "NAME",
-														1 => "EMAIL",
+														"NAME",
+														"EMAIL",
+														"MESSAGE"
+
 													),
 													"EVENT_MESSAGE_ID" => array(
 														0 => "7",

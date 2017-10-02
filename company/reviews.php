@@ -73,7 +73,7 @@
 		"USE_PERMISSIONS" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
-			0 => "",
+			0 => "DETAIL_PICTURE",
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
