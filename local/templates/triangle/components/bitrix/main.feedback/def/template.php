@@ -38,8 +38,6 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
 				<input type="submit" name="submit" class="btn btn-submit" value="Submit">
 		</div>
 
-
-
 </form>
 
 </div>
