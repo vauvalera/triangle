@@ -2,6 +2,19 @@
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery.js');
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/bootstrap.min.js');
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/lightbox.min.js');
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/wow.min.js');
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/main.js');
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/gmaps.js');
+$APPLICATION->AddHeadScript('http://maps.google.com/maps/api/js?sensor=true');
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/bootstrap.min.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/font-awesome.min.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/animate.min.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/lightbox.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/prettyPhoto.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/responsive.css");
 	// $bIsMainPage = $APPLICATION->GetCurPage(false) == SITE_DIR;
 ?>
 <!DOCTYPE html>
@@ -13,14 +26,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     <meta name="author" content="">
 	<title><?$APPLICATION->ShowTitle();?></title>
 	<?$APPLICATION->ShowHead();?>
-
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/bootstrap.min.css")?>
-	<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/font-awesome.min.css")?>
-	<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/animate.min.css")?>
-	<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/lightbox.css")?>
-	<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/prettyPhoto.css")?>
-	<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/responsive.css")?>
-
     <!--[if lt IE 9]>>
 		<script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/js/html5shiv.js');?>"></script>
 		<script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/js/respond.min.js');?>"></script>

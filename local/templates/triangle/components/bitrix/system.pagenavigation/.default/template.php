@@ -144,9 +144,11 @@ $strNavQueryStringFull = ($arResult["NavQueryString"] != "" ? "?".$arResult["Nav
 			   ?>=<?= ($arResult["NavPageNomer"] + 1) ?>"></a>
 		</li>
 	<?else:?>
-			<a href="<?= $arResult["sUrlPath"] ?>?<?= $strNavQueryString ?>PAGEN_<?= $arResult["NavNum"]
-			?>=<?= $arResult["NavPageCount"] ?>"></a>
-		</li>
+	<li>
+		<a href="<?= $arResult["sUrlPath"] ?>?<?= $strNavQueryString ?>PAGEN_<?= $arResult["NavNum"]
+		?>=<?= $arResult["NavPageCount"] ?>"><i class="fa fa-angle-right"></i></a>
+	</li>
+	
 	<?endif?>
 
 <?endif?>
