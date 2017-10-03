@@ -168,9 +168,9 @@
 #header{
   margin-bottom: 0;
   padding: 30px 0 60px 0;
-  position: fixed;
+  /*position: fixed;*/
   z-index:200;
-  width:100%;
+  /*width:100%;*/
 }
 
 #header .navbar-inverse .container{
