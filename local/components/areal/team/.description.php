@@ -2,19 +2,16 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
 $arComponentDescription = array(
-	"NAME" => GetMessage("IBLOCK_NEWS_NAME"),
-	"DESCRIPTION" => GetMessage("IBLOCK_NEWS_DESCRIPTION"),
+	"NAME" => 'areal:team',
+	"DESCRIPTION" => 'Тима раков Тима раков Тима раков Тима раков Тима раков Тима раков ',
 	"ICON" => "",
-	"COMPLEX" => "Y",
+	"COMPLEX" => "N",
 	"PATH" => array(
 		"ID" => "content",
 		"CHILD" => array(
-			"ID" => "news",
-			"NAME" => GetMessage("T_IBLOCK_DESC_NEWS"),
+			"ID" => "areal",
+			"NAME" => 'areal',
 			"SORT" => 10,
-			"CHILD" => array(
-				"ID" => "news_cmpx",
-			),
 		),
 	),
 );
