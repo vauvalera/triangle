@@ -1,8 +1,8 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 
 <?$APPLICATION->IncludeComponent(
-	"teamComp:team",
-	".default",
+	"areal:team",
+	"",
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "reviews",
