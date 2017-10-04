@@ -1,6 +1,6 @@
 <?
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
-/** @var array $arResult */
+
 CModule::IncludeModule('iblock');
 
 	//SELECT
@@ -25,12 +25,12 @@ CModule::IncludeModule('iblock');
 	];
 
 	$i = 0;
-  	$arResult["ITEMS"] = [];
+  	//$arResult["ITEMS"] = [];
   	$obj = CIBlockSection::GetList(
 		[],
 		$arFilter,
 		false,
-		['ID', 'NAME']
+		['ID' , 'NAME']
 	);
 
   	while ($row = $obj->Fetch()) {
@@ -47,7 +47,7 @@ CModule::IncludeModule('iblock');
 
 	while ($row = $obj->Fetch()) {
 		$arResult["ITEMS"][$row["IBLOCK_SECTION_ID"]]["EMPLOYEES"][] = $row;
-	}
+	};
 
-pre($arResult);
+//pre($arResult);
 $this->includeComponentTemplate();

@@ -1,12 +1,10 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news",
-	".default",
+	"blog",
 	array(
-		"COMPONENT_TEMPLATE" => ".default",
-		"IBLOCK_TYPE" => "reviews",
-		"IBLOCK_ID" => "5",
+		"IBLOCK_TYPE" => "blog",
+		"IBLOCK_ID" => "7",
 		"NEWS_COUNT" => "4",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_ORDER1" => "DESC",
@@ -53,7 +51,7 @@
 		"PAGER_TEMPLATE" => ".default",
 		"DISPLAY_TOP_PAGER" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"PAGER_TITLE" => "Новости",
+		"PAGER_TITLE" => "Блог",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -74,7 +72,7 @@
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
 			0 => "DETAIL_PICTURE",
-			1 => "",
+			1 => "PROPERTY_AUTHOR.NAME",
 		),
 		"LIST_PROPERTY_CODE" => array(
 			0 => "",
@@ -90,7 +88,7 @@
 			1 => "",
 		),
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
+			0 => "PROPERTY_AUTHOR.NAME",
 			1 => "",
 		),
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",

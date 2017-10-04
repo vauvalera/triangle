@@ -1,12 +1,9 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var array $arResult */
-$i = 0;
 $this->setFrameMode(true);
+ //pre($arResult["ITEMS"]);
 ?>
 <div class="news-list">
-<?if($arParams["DISPLAY_TOP_PAGER"]):?>
-   <?=$arResult["NAV_STRING"]?><br />
-<?endif;?>
 <?if($arResult["ITEMS"]):?>
 <section id="page-breadcrumb">
         <div class="vertical-center sun">
@@ -30,8 +27,8 @@ $this->setFrameMode(true);
                        <div class="sidebar-item categories">
                            <h3>Отделы</h3>
                            <ul class="nav navbar-stacked">
-                               <?foreach($arResult["ITEMS"] as $cell=>$arItem):?>
-                               <li><a href="#"><?=$arItem["NAME"]?><span class="pull-right">(<?=$arItem["ELEMENT_CNT"]?>)</span></a></li>
+                               <?foreach($arResult["ITEMS"] as $arItem):?>
+                               <li><a><?=$arItem["NAME"]?><span class="pull-right">(<?=count($arItem["EMPLOYEES"])?>)</span></a></li>
                                <?endforeach;?>
                            </ul>
                        </div>
@@ -39,36 +36,58 @@ $this->setFrameMode(true);
                </div>
                <div class="col-md-9 col-sm-8">
                     <div class="row">
-                        <?foreach($arResult["ITEMS"] as $cell=>$arItem):?>
-                        <?for($i=0;$i<count($arResult["ITEMS"]);$i++):?>
+                        <?foreach($arResult["ITEMS"] as $arItem):?>
+                        <?foreach($arItem["EMPLOYEES"] as $emp):?>
                         <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded logos">
                             <div class="portfolio-wrapper">
                                 <div class="portfolio-single">
                                     <div class="portfolio-thumb">
                                         <img
-                                         src="<?=$arItem[$i]["PREVIEW_PICTURE"]["src"]?>"
+                                         src="<?=$emp["PREVIEW_PICTURE"]["src"]?>"
                                          height="261"
                                          width="200"
                                           alt="">
                                     </div>
                                     <div class="portfolio-view">
                                         <ul class="nav nav-pills">
-                                            <li><a href="<?=$arItem[$i]["PREVIEW_PICTURE"]["src"]?>" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                              <li><a href="javascript:del()"><i class="fa fa-link"></i></a></li>
+                                              <div id="popup" class="popup mfp-hide">
+                            <form action="send1.php" method="post">
+                                <div class="popup__header">
+                                    <div class="popup__title">Закажите звонок<br>прямо сейчас!</div>
+                                    <div class="popup__info">оставьте свои данные, чтобы<br> мы могли связаться с вами:</div>
+                                </div>
+                                <div class="popup__footer">
+                                    <input type="text" value="Введите Имя" class="popup__inputText" onfocus="if(this.value=='Введите Имя')this.value='';" onblur="if(this.value=='')this.value='Введите Имя';">
+                                    <input type="text" value="Введите Телефон" class="popup__inputText" onfocus="if(this.value=='Введите Телефон')this.value='';" onblur="if(this.value=='')this.value='Введите Телефон';">
+                                    <input type="submit" value="Заказать сейчас" class="popup__inputSubmit">
+                                </div>
+                            </form>
+                        </div>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="portfolio-info ">
-                                    <h2><?=$arItem[$i]["NAME"]?></h2>
+                                    <h2><?=$emp["NAME"]?></h2>
                                 </div>
                             </div>
                         </div>
-                        <?endfor;?>
                         <?endforeach;?>
+                        <?endforeach;?>
+                    </div>
+                </div>
 
-           </div>
-       </div>
+            </div>
+        </div>
+
    </section>
-   <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
-   <?=$arResult["NAV_STRING"]?>
-   <?endif;?>
+   <script>
+   function del($)
+   {
+       $('.popup-content').magnificPopup({
+           type: 'inline'
+});
+}
+    </script>
+
    <?endif;?>

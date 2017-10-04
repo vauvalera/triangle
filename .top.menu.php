@@ -11,7 +11,7 @@ $aMenuLinks = Array(
 	Array(
 		"О компании",
 		"company/",
-		Array("#"),
+		Array(),
 		Array(),
 		""
 	),
@@ -24,7 +24,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Блог",
-		"#",
+		"/blog",
 		Array(),
 		Array(),
 		""
