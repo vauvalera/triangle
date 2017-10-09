@@ -168,9 +168,9 @@
 #header{
   margin-bottom: 0;
   padding: 30px 0 60px 0;
-  /*position: fixed;*/
-  z-index:200;
-  /*width:100%;*/
+  top:0;
+
+
 }
 
 #header .navbar-inverse .container{
@@ -257,6 +257,10 @@
   background: #fff;
   border: 0;
   margin-bottom: 0;
+  TOP: 4;
+  position: fixed;
+  z-index:999;
+  width:100%;
 }
 
 #header .navbar-toggle{
@@ -300,12 +304,12 @@
 }
 
 
-/*  Dropdown menu*/
 
 ul.sub-menu {
   display: none;
   list-style: none;
   padding: 0;
+  /*  Dropdown menu*/
   margin: 0;
 }
 
@@ -2725,4 +2729,13 @@ span.stButton_gradient,
   -webkit-box-shadow: 0 0 0 5px rgba(0,0,0,.1) inset;
   border-radius: 100%;
   margin: 10px 0;
+}
+.background-color-red{
+    background-color: #8A0829;
+}
+.background-color-green{
+    background-color: #008000;#1E90FF
+}
+.background-color-blue{
+    background-color: #1E90FF;
 }
