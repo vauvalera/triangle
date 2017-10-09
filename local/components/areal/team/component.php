@@ -24,7 +24,7 @@ CModule::IncludeModule('iblock');
 		"ACTIVE" => "Y",
 	];
 
-	$i = 0;
+
   	//$arResult["ITEMS"] = [];
   	$obj = CIBlockSection::GetList(
 		[],

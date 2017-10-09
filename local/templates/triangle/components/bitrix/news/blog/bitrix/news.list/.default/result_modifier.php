@@ -16,3 +16,25 @@ foreach ($arResult['ITEMS'] as &$arItem) {
     }
 }
 unset($arItem);
+
+CModule::IncludeModule('iblock');
+$tagCODE = CIBlockElement::GetList(
+    false,
+    ['IBLOCK_ID' => 8],
+    false,
+    false,
+    ['ID','CODE']
+);
+while($code = $tagCODE->Fetch()) {
+        $a[$code['ID']] = $code['CODE'];
+    }
+foreach ($arResult['ITEMS'] as &$arItem) {
+    foreach ($arItem['PROPERTIES'] as &$prop)
+    {
+        foreach ($prop['VALUE'] as  &$val)
+        {
+            $val = $a[$val];
+        }
+        }
+    }
+unset($tagCODE);

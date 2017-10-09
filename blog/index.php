@@ -1,4 +1,5 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"blog",
@@ -28,7 +29,7 @@
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"CACHE_TYPE" => "A",
 		"CACHE_TIME" => "36000000",
-		"CACHE_FILTER" => "N",
+		"CACHE_FILTER" => "Y",
 		"CACHE_GROUPS" => "Y",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"ACTIVE_DATE_FORMAT" => "j F Y",
@@ -66,16 +67,17 @@
 		"USE_RATING" => "N",
 		"USE_CATEGORIES" => "N",
 		"USE_FILTER" => "N",
-		"SEF_MODE" => "N",
+		"SEF_MODE" => "Y",
 		"ADD_ELEMENT_CHAIN" => "N",
 		"USE_PERMISSIONS" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
 			0 => "DETAIL_PICTURE",
 			1 => "PROPERTY_AUTHOR.NAME",
+			2 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "",
+			0 => "PROPERTY_TAG.CODE",
 			1 => "",
 		),
 		"META_KEYWORDS" => "-",
@@ -88,17 +90,20 @@
 			1 => "",
 		),
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "PROPERTY_AUTHOR.NAME",
 			1 => "",
+			2 => "",
 		),
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
-		"VARIABLE_ALIASES" => array(
-			"SECTION_ID" => "SECTION_ID",
-			"ELEMENT_ID" => "ELEMENT_ID",
+		"COMPONENT_TEMPLATE" => "blog",
+		"SEF_FOLDER" => "/blog/",
+		"SEF_URL_TEMPLATES" => array(
+			"news" => "",
+			"tag" => "tag/#TAG#/",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false

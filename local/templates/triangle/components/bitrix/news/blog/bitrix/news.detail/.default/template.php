@@ -11,7 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-pre($arResult);
 ?>
 <div class="news-detail">
 	<section id="blog" class="padding-top">

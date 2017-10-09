@@ -29,7 +29,6 @@ $this->setFrameMode(true);
 	            </div>
 	        </div>
 	   </section>
-
 	<section id="blog" class="padding-top">
         <div class="container">
             <div class="row">
@@ -50,6 +49,11 @@ $this->setFrameMode(true);
 												<?endif;?>
 												<div class="post-content overflow">
 													<h2 class="post-title bold"><?=$arItem["NAME"]?></h2>
+													    <?foreach ($arItem['PROPERTIES'] as $prop):?>
+															<?foreach ($prop['VALUE'] as  $val):?>
+															<h3 class="post-title bold"><a href="/blog/tag/<?=$val?>/"><?=$val?></a></h3>
+																<?endforeach;?>
+																	<?endforeach;?>
 													<h3 class="post-author">Posted by<a href="#"> <?=$arItem["PROPERTY_AUTHOR_NAME"]?></a></h3>
 													<p><?=$arItem["DETAIL_TEXT"]?></p>
 													<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="read-more">View More</a>

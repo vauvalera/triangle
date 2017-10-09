@@ -2,8 +2,15 @@
 /** @var array $arResult */
 $this->setFrameMode(true);
  //pre($arResult["ITEMS"]);
+ $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery.magnific-popup.js');
+ $APPLICATION->AddHeadScript('http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
+ $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/css/magnific-popup.css');
 ?>
-<div class="news-list">
+<script>
+  $(document).ready(function() {
+    $("#dialog").dialog();
+  });
+</script>
 <?if($arResult["ITEMS"]):?>
 <section id="page-breadcrumb">
         <div class="vertical-center sun">
@@ -48,24 +55,13 @@ $this->setFrameMode(true);
                                          width="200"
                                           alt="">
                                     </div>
-                                    <div class="portfolio-view">
-                                        <ul class="nav nav-pills">
-                                              <li><a href="javascript:del()"><i class="fa fa-link"></i></a></li>
-                                              <div id="popup" class="popup mfp-hide">
-                            <form action="send1.php" method="post">
-                                <div class="popup__header">
-                                    <div class="popup__title">Закажите звонок<br>прямо сейчас!</div>
-                                    <div class="popup__info">оставьте свои данные, чтобы<br> мы могли связаться с вами:</div>
-                                </div>
-                                <div class="popup__footer">
-                                    <input type="text" value="Введите Имя" class="popup__inputText" onfocus="if(this.value=='Введите Имя')this.value='';" onblur="if(this.value=='')this.value='Введите Имя';">
-                                    <input type="text" value="Введите Телефон" class="popup__inputText" onfocus="if(this.value=='Введите Телефон')this.value='';" onblur="if(this.value=='')this.value='Введите Телефон';">
-                                    <input type="submit" value="Заказать сейчас" class="popup__inputSubmit">
-                                </div>
-                            </form>
-                        </div>
-                                        </ul>
-                                    </div>
+                                     <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                            <li>
+                                                <a href="javascript:div()"><i class="fa fa-link"></i></a>
+                                            </li>
+                                         </ul>
+                                     </div>
                                 </div>
                                 <div class="portfolio-info ">
                                     <h2><?=$emp["NAME"]?></h2>
@@ -76,18 +72,17 @@ $this->setFrameMode(true);
                         <?endforeach;?>
                     </div>
                 </div>
-
             </div>
         </div>
-
    </section>
-   <script>
-   function del($)
+
+<script>
+   function div()
    {
-       $('.popup-content').magnificPopup({
-           type: 'inline'
-});
-}
-    </script>
+      for(var i=1; i<=3; i++) {
+          alert(<?=$emp["NAME"]?>)
+      }
+};
+  </script>
 
    <?endif;?>
