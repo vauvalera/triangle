@@ -2,15 +2,9 @@
 /** @var array $arResult */
 $this->setFrameMode(true);
  //pre($arResult["ITEMS"]);
- $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery.magnific-popup.js');
  $APPLICATION->AddHeadScript('http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
- $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/css/magnific-popup.css');
+ $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/css/modalWindow.css');
 ?>
-<script>
-  $(document).ready(function() {
-    $("#dialog").dialog();
-  });
-</script>
 <?if($arResult["ITEMS"]):?>
 <section id="page-breadcrumb">
         <div class="vertical-center sun">
@@ -58,9 +52,10 @@ $this->setFrameMode(true);
                                      <div class="portfolio-view">
                                     <ul class="nav nav-pills">
                                             <li>
-                                                <a href="javascript:div()"><i class="fa fa-link"></i></a>
+                                                <a href="#openModal<?=$emp["NAME"]?>"><i class="fa fa-link"></i></a>
                                             </li>
                                          </ul>
+
                                      </div>
                                 </div>
                                 <div class="portfolio-info ">
@@ -68,21 +63,20 @@ $this->setFrameMode(true);
                                 </div>
                             </div>
                         </div>
+                        <div id="openModal<?=$emp["NAME"]?>" class="modalDialog">
+                            <div>
+                                <a href="#close" title="Закрыть" class="close">X</a>
+                                <h2>Биография сотрудника</h2>
+                                <p><?=$emp["PREVIEW_TEXT"]?></p>
+                            </div>
+                        </div>
                         <?endforeach;?>
                         <?endforeach;?>
+
                     </div>
                 </div>
             </div>
         </div>
    </section>
-
-<script>
-   function div()
-   {
-      for(var i=1; i<=3; i++) {
-          alert(<?=$emp["NAME"]?>)
-      }
-};
-  </script>
 
    <?endif;?>
