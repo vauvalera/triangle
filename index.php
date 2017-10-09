@@ -20,10 +20,6 @@
 </section>
 <!--/#home-slider-->
 
-
-<section id="features">
-
-</section>
 <!--/#features-->
 
 

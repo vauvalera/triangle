@@ -6,38 +6,31 @@ $sortParams = [
 
 //если cookies пустые
 $currentSort = $APPLICATION->get_cookie("sort_order");
-if (empty($currentSort))
-{
+if (empty($currentSort)) {
 $currentSort = reset(array_keys($sortParams));
 }
 
 
 if (isset($sortParams[$_REQUEST['sort']]))
 {
-if ($currentSort != $_REQUEST['sort'])
-{
-		$APPLICATION->set_cookie("sort_order", $_REQUEST['sort'], time()+60*60*60*24);
-		$currentSort = $_REQUEST['sort'];
-}
+	if ($currentSort != $_REQUEST['sort']) {
+			$APPLICATION->set_cookie("sort_order", $_REQUEST['sort'], time()+60*60*60*24);
+			$currentSort = $_REQUEST['sort'];
+	}
 		$arParams["SORT_ORDER1"] = $_REQUEST['sort'];
-
 }
 
-if (!empty($sortParams)){
-	?>
-<nav class="nav-list">
-	<?
-foreach ($sortParams as $param => $title)
-	{
+if (!empty($sortParams)) {
+?><nav class="nav-list">
+	<?foreach ($sortParams as $param => $title) {
 			if ($currentSort == $param) {
 	?>
 	<h3><span class="nav-list-item active"><?=$title?></span></h3>
 	<?
-			}
-			else {
+			} else {
 	?>
 		<h3><a class="nav-list-item" href="?sort=<?=$param?>"><?=$title?></a></h3><?
-				}
+			}
 	}
 	?>
 	</nav>

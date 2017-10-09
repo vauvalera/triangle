@@ -12,6 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
 <?=$arItem['SHOW_COUNTER']?>
 <?=$arResult['SHOW_COUNTER']?>
 <div class="news-list">
@@ -49,12 +50,14 @@ $this->setFrameMode(true);
 												<?endif;?>
 												<div class="post-content overflow">
 													<h2 class="post-title bold"><?=$arItem["NAME"]?></h2>
+													<p>
 													    <?foreach ($arItem['PROPERTIES'] as $prop):?>
 															<?foreach ($prop['VALUE'] as  $val):?>
-															<h3 class="post-title bold"><a href="/blog/tag/<?=$val?>/"><?=$val?></a></h3>
-																<?endforeach;?>
-																	<?endforeach;?>
-													<h3 class="post-author">Posted by<a href="#"> <?=$arItem["PROPERTY_AUTHOR_NAME"]?></a></h3>
+																	<a href="/blog/tag/<?=$val?>/"><?=$val?></a>
+															<?endforeach;?>
+														<?endforeach;?>
+													</p>
+													<h3 class="post-author">Posted by <a href="#"> <?=$arItem["PROPERTY_AUTHOR_NAME"]?></a></h3>
 													<p><?=$arItem["DETAIL_TEXT"]?></p>
 													<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="read-more">View More</a>
 												</div>
@@ -64,9 +67,9 @@ $this->setFrameMode(true);
 									<?endforeach;?>
 								</div>
 						</div>
-					</div>
 				</div>
-			</section>
+		</div>
+	</section>
 <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
 	<br /><?=$arResult["NAV_STRING"]?>
 <?endif;?>

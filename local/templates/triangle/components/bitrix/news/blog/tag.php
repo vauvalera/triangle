@@ -15,6 +15,7 @@ if ($tagId > 0) {
         '=PROPERTY_TAG' => $tagId
     ];
 }
+
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",

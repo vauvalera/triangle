@@ -38,7 +38,7 @@ $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/responsive.css");
 </head>
 
 <body>
-<?//$APPLICATION->ShowPanel();?>
+<?$APPLICATION->ShowPanel();?>
 <header id="header">
 	<div class="container">
 		<div class="row">
@@ -48,8 +48,8 @@ $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/responsive.css");
 					SITE_DIR."/include/social.php",
 					array(),
 					array("MODE" => "html"
-							)
-							);?>
+						)
+					);?>
 				</div>
 			</div>
 		</div>
