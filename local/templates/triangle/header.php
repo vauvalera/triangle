@@ -97,13 +97,12 @@ $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/responsive.css");
 				"bitrix:search.form",
 				"flat",
 				array(
-					"NAME" => "q",
-					"VALUE" => "",
-					"INPUT_SIZE" => 15,
-					"DROPDOWN_SIZE" => 10,
+					"PAGE" => "#SITE_DIR#search/index.php",
+					"USE_SUGGEST" => "N",
+					"COMPONENT_TEMPLATE" => "flat"
 				),
-				$component, array("HIDE_ICONS" => "Y")
-	);?>
+				false
+			);?>
         </div>
     </div>
 </header>

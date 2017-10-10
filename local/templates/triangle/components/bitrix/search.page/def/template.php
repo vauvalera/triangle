@@ -33,8 +33,6 @@
 		),
 		$component, array("HIDE_ICONS" => "Y")
 	);?>
-<?else:?>
-	<input type="text" name="q" value="<?=$arResult["REQUEST"]["QUERY"]?>" size="40" />
 <?endif;?>
 <?if($arParams["SHOW_WHERE"]):?>
 	&nbsp;<select name="where">
@@ -44,7 +42,6 @@
 	<?endforeach?>
 	</select>
 <?endif;?>
-	&nbsp;<input type="submit" value="<?=GetMessage("SEARCH_GO")?>" />
 	<input type="hidden" name="how" value="<?echo $arResult["REQUEST"]["HOW"]=="d"? "d": "r"?>" />
 <?if($arParams["SHOW_WHEN"]):?>
 	<script>
