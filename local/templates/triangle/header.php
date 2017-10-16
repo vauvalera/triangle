@@ -36,10 +36,9 @@ $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/responsive.css");
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?=SITE_TEMPLATE_PATH?>/images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="<?=SITE_TEMPLATE_PATH?>/images/ico/apple-touch-icon-57-precomposed.png">
 </head>
-
 <body>
-<?$APPLICATION->ShowPanel();?>
 <div class="headerstat">
+<?$APPLICATION->ShowPanel();?>
 <header id="header">
 	<div class="container">
 		<div class="row">

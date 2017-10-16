@@ -105,7 +105,7 @@
 												array(
 													"COMPONENT_TEMPLATE" => ".default",
 													"OK_TEXT" => "Спасибо, ваше сообщение принято.",
-													"EMAIL_TO" => "vauvalera@gmail.com",
+													"EMAIL_TO" => "valera31_1994@mail.ru",
 													"REQUIRED_FIELDS" => array(
 														"NAME",
 														"EMAIL",
