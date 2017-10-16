@@ -83,16 +83,16 @@
 												array(),
 												array("MODE" => "html"
 														)
-														);?>
+											);?>
 											</address>
 											<h2>Address</h2>
 											<address>
 												<?$APPLICATION->IncludeFile(
-												SITE_DIR."/include/adress2.php",
-												array(),
-												array("MODE" => "text"
-														)
-														);?>
+													SITE_DIR."/include/adress2.php",
+													array(),
+													array("MODE" => "text"
+												)
+											);?>
 											</address>
 									</div>
 							</div>
@@ -105,7 +105,7 @@
 												array(
 													"COMPONENT_TEMPLATE" => ".default",
 													"OK_TEXT" => "Спасибо, ваше сообщение принято.",
-													"EMAIL_TO" => "vauvalera@google.com",
+													"EMAIL_TO" => "vauvalera@gmail.com",
 													"REQUIRED_FIELDS" => array(
 														"NAME",
 														"EMAIL",

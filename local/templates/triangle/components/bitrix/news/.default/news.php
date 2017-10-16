@@ -21,18 +21,20 @@ if (isset($sortParams[$_REQUEST['sort']]))
 }
 
 if (!empty($sortParams)) {
-?><nav class="nav-list">
+?><nav class="nav-list"><p>
 	<?foreach ($sortParams as $param => $title) {
 			if ($currentSort == $param) {
 	?>
-	<h3><span class="nav-list-item active"><?=$title?></span></h3>
+
+	<span class="nav-list-item active"><?=$title?></span>
 	<?
 			} else {
 	?>
-		<h3><a class="nav-list-item" href="?sort=<?=$param?>"><?=$title?></a></h3><?
+		<a class="nav-list-item" href="?sort=<?=$param?>"><?=$title?></a><?
 			}
 	}
 	?>
+	</p>
 	</nav>
 	<?
 }

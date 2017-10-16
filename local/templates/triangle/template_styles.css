@@ -164,12 +164,9 @@
 *******Header******
 **************************/
 
-
 #header{
   margin-bottom: 0;
   padding: 30px 0 60px 0;
-  top:0;
-
 
 }
 
@@ -257,10 +254,6 @@
   background: #fff;
   border: 0;
   margin-bottom: 0;
-  TOP: 4;
-  position: fixed;
-  z-index:999;
-  width:100%;
 }
 
 #header .navbar-toggle{
@@ -2738,4 +2731,17 @@ span.stButton_gradient,
 }
 .background-color-blue{
     background-color: #1E90FF;
+}
+.headerstat
+{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    height: 172px;
+    background-color: white;
+}
+.pusto
+{
+    height: 172px;
 }

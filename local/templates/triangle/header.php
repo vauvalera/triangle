@@ -39,6 +39,7 @@ $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/responsive.css");
 
 <body>
 <?$APPLICATION->ShowPanel();?>
+<div class="headerstat">
 <header id="header">
 	<div class="container">
 		<div class="row">
@@ -63,14 +64,13 @@ $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/responsive.css");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-				<h3></h3>
 				<?if ($APPLICATION->GetCurPage(false) == SITE_DIR):?>
 					<span class="logo">
-					 <img class = "background-color-<?$APPLICATION->ShowProperty("color")?>" src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="logo">
+					 	<img class = "background-color-<?$APPLICATION->ShowProperty("color")?>" src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="logo">
 					</span>
 				<?else:?>
 					<a href="/">
-						 <img class = "background-color-<?$APPLICATION->ShowProperty("color")?>" src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="logo">
+						<img class = "background-color-<?$APPLICATION->ShowProperty("color")?>" src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" alt="logo">
 					</a>
 				<?endif;?>
             </div>
@@ -95,15 +95,17 @@ $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/responsive.css");
 			);?>
 			<?$APPLICATION->IncludeComponent(
 				"bitrix:search.form",
-				"flat",
+				"poisk",
 				array(
 					"PAGE" => "#SITE_DIR#search/index.php",
 					"USE_SUGGEST" => "N",
-					"COMPONENT_TEMPLATE" => "flat"
+					"COMPONENT_TEMPLATE" => "poisk"
 				),
 				false
 			);?>
         </div>
     </div>
 </header>
+</div>
+<div class="pusto"></div>
 <div class="content">
